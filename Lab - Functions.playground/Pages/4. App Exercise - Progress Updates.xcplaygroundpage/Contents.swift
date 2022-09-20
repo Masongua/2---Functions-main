@@ -9,8 +9,20 @@
  
  Call the function a number of times, passing in different values of `steps` and `goal`. Observe the printouts and make sure what is printed to the console is what you would expect for the parameters passsed in.
  */
-
-
+func progressUpdate(steps: Int, goal: Int){
+    if steps < (goal * Int(0.10)) {
+        print("You're off to a good start.")
+    } else if steps < (goal * Int(0.50)){
+        print("You're almost halfway there!")
+    } else if steps < (goal * Int(0.90)){
+        print("You're over halfway there!")
+    } else if steps < goal {
+        print("You're almost there!")
+    } else{
+        print("You beat your goal!")
+    }
+}
+progressUpdate(steps: 1000, goal: 10000)
 
 
 /*:
